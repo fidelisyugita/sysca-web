@@ -20,7 +20,7 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ src }) => {
         className="absolute inset-0 z-10 bg-black/20 backdrop-blur-2xl transition-opacity duration-1000 ease-in-out"
         initial={{ opacity: 1 }}
         animate={{ opacity: isLoading ? 1 : 0 }}
-        pointerEvents="none"
+        // pointerEvents="none"
       />
       
       {isWebP ? (

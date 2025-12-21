@@ -86,6 +86,3 @@ src/
 *   **Admin Dashboard**: A private route for managing booking availability.
 *   **Payment Gateway**: Stripe integration for securing booking deposits.
 
----
-
-Designed & Developed with ❤️ for Sysca Anggelia.
