@@ -7,8 +7,9 @@ interface VideoBackgroundProps {
 
 const VideoBackground: React.FC<VideoBackgroundProps> = ({ src }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const isWebP = src.toLowerCase().endsWith('.webp');
 
-  const handleVideoLoad = () => {
+  const handleLoad = () => {
     setIsLoading(false);
   };
 
@@ -22,17 +23,26 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ src }) => {
         pointerEvents="none"
       />
       
-      <video
-        className={`w-full h-full object-cover transition-all duration-1000 ease-in-out ${isLoading ? 'scale-105 blur-lg opacity-0' : 'scale-100 blur-0 opacity-100'}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        onLoadedData={handleVideoLoad}
-      >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {isWebP ? (
+        <img
+          src={src}
+          alt="background"
+          className={`w-full h-full object-cover transition-all duration-1000 ease-in-out ${isLoading ? 'scale-105 blur-lg opacity-0' : 'scale-100 blur-0 opacity-100'}`}
+          onLoad={handleLoad}
+        />
+      ) : (
+        <video
+          className={`w-full h-full object-cover transition-all duration-1000 ease-in-out ${isLoading ? 'scale-105 blur-lg opacity-0' : 'scale-100 blur-0 opacity-100'}`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          onLoadedData={handleLoad}
+        >
+          <source src={src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
       
       {/* Overlay for contrast */}
       <div className="absolute inset-0 bg-black/20" /> 
