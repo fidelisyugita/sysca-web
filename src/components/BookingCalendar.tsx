@@ -5,9 +5,20 @@ import clsx from 'clsx';
 import { SERVICES, fetchAvailableSlots } from '../lib/db';
 import type { Service, TimeSlot } from '../lib/db';
 
-const BookingCalendar: React.FC = () => {
+interface BookingCalendarProps {
+    initialServiceId?: string | null;
+}
+
+const BookingCalendar: React.FC<BookingCalendarProps> = ({ initialServiceId }) => {
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [selectedDate, setSelectedDate] = useState<Date>(startOfToday());
+    
+    useEffect(() => {
+        if (initialServiceId) {
+            const service = SERVICES.find(s => s.id === initialServiceId);
+            if (service) setSelectedService(service);
+        }
+    }, [initialServiceId]);
     const [slots, setSlots] = useState<TimeSlot[]>([]);
     const [loadingSlots, setLoadingSlots] = useState(false);
     

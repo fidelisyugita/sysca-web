@@ -5,9 +5,10 @@ import BookingCalendar from './BookingCalendar';
 interface BookingModalProps {
     isOpen: boolean;
     onClose: () => void;
+    initialServiceId?: string | null;
 }
 
-const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
+const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, initialServiceId }) => {
     // Prevent body scroll when modal is open
     useEffect(() => {
         if (isOpen) {
@@ -57,7 +58,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                             
                             {/* Content Area */}
                             <div className="flex-1 p-6 overflow-y-auto text-white">
-                                <BookingCalendar />
+                                <BookingCalendar initialServiceId={initialServiceId} />
                             </div>
                          </div>
                     </motion.div>
