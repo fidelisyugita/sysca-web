@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 
 .firebase
+# Environment
+.env
+
+# Lock files
+*.lock.json
+package-lock.json
