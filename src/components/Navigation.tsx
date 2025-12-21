@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const SECTIONS = [
     { id: 'hero', label: 'Intro' },
     { id: 'corporate', label: 'Professional' },
-    { id: 'creative', label: 'Creative' },
+    // { id: 'creative', label: 'Creative' },
     { id: 'connect', label: 'Connect' }
 ];
 

@@ -61,9 +61,14 @@ const Home: React.FC = () => {
           <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl font-thin tracking-tighter mb-4">
             Sysca Anggelia
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-xl md:text-2xl font-light opacity-90 tracking-widest uppercase">
-            VA • HR • Teacher • Artist
+          <motion.p variants={fadeInUp} className="text-l md:text-xl font-light opacity-90 tracking-widest uppercase">
+            Virtual Executive Assistant • Private Mentor
           </motion.p>
+          <motion.div variants={fadeInUp} className="mt-8">
+            <Link to="/portfolio" className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm rounded-full transition-all text-sm tracking-widest uppercase">
+              View Full Portfolio
+            </Link>
+          </motion.div>
         </div>
       </ParallaxSection>
 
@@ -72,13 +77,13 @@ const Home: React.FC = () => {
         <VideoBackground src={VIDEOS.corporate} />
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
             <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/15 transition duration-500 max-w-xl flex flex-col items-start">
-                 <motion.h2 variants={fadeInUp} className="text-5xl md:text-7xl mb-6 font-medium">The Professional</motion.h2>
+                 <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl mb-6 font-medium">Private English Mentor</motion.h2>
                  <motion.p variants={fadeInUp} className="text-lg md:text-xl leading-relaxed opacity-90 mb-4">
-                    Virtual Assistance. Human Resources. Education.
+                    Your Safe Space to Practice English
                  </motion.p>
                  <motion.p variants={fadeInUp} className="text-base md:text-lg font-light opacity-80 mb-8">
-                    Delivering structured excellence and strategic support across corporate landscapes.
-                    Precision, empathy, and efficiency are the pillars of my work.
+                    This class is designed to help you speak confidently, communicate naturally, and use English in real-life situations — whether for work, study, or personal growth.
+                    Learning English doesn’t have to feel overwhelming — with the right guidance, it can be practical, fun, and deeply rewarding.
                  </motion.p>
                  
                  {/* Gamification Hook */}
@@ -95,7 +100,7 @@ const Home: React.FC = () => {
       </ParallaxSection>
 
       {/* 3. Creative Section (Tattoo/Nails) - Bold, Expressive */}
-      <ParallaxSection id="creative" className="font-display">
+      {/* <ParallaxSection id="creative" className="font-display">
         <VideoBackground src={VIDEOS.creative} />
         <div className="p-10 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-2xl max-w-2xl text-right ml-auto mr-4 md:mr-20">
             <motion.h2 variants={fadeInUp} className="text-6xl md:text-9xl font-bold tracking-tight mb-4 uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -108,12 +113,12 @@ const Home: React.FC = () => {
                 Where expression meets permanence. Creating unique visuals that tell your story on your skin.
             </motion.p>
         </div>
-      </ParallaxSection>
+      </ParallaxSection> */}
 
       {/* 4. Connect Section */}
       <ParallaxSection id="connect" className="font-sans">
         <VideoBackground src={VIDEOS.connect} />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+        <div className="grid grid-cols-1 min-h-[calc(40vh)] md:grid-cols-2 gap-8 w-full max-w-4xl">
             <motion.div variants={fadeInUp} className="p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 flex flex-col justify-center h-full">
                 <h2 className="text-5xl font-thin mb-4">Connect</h2>
                 <p className="text-xl opacity-80 mb-8">Ready to collaborate across any dimension?</p>
