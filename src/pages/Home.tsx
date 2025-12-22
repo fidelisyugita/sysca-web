@@ -8,11 +8,16 @@ import VideoBackground from '../components/VideoBackground';
 import BookingModal from '../components/BookingModal';
 
 // Local WebP Assets
+// Local WebP Assets
+import heroVideo from '../assets/hero.webp';
+import corporateVideo from '../assets/corporate.webp';
+import creativeVideo from '../assets/creative.webp';
+
 const VIDEOS = {
-  hero: "/hero.webp",
-  corporate: "/corporate.webp",
-  creative: "/creative.webp",
-  connect: "/hero.webp" 
+  hero: heroVideo,
+  corporate: corporateVideo,
+  creative: creativeVideo,
+  connect: heroVideo 
 };
 
 // Reusable animation variants for children
@@ -72,12 +77,12 @@ const Home: React.FC = () => {
         </div>
       </ParallaxSection>
 
-      {/* 2. Corporate Section (HR/VA/Teacher) - Clean, Serif */}
-      <ParallaxSection id="corporate" className="font-serif">
+      {/* 2. Corporate Section (HR/VA/Teacher) - Clean, Sans */}
+      <ParallaxSection id="corporate" className="font-sans">
         <VideoBackground src={VIDEOS.corporate} />
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-            <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/15 transition duration-500 max-w-xl flex flex-col items-start">
-                 <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl mb-6 font-medium">Private English Mentor</motion.h2>
+            <div className="p-10 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-lg hover:bg-black40 transition duration-500 max-w-3xl flex flex-col items-start">
+                 <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl mb-6 font-medium">Private English Mentor</motion.h2>
                  <motion.p variants={fadeInUp} className="text-lg md:text-xl leading-relaxed opacity-90 mb-4">
                     Your Safe Space to Practice English
                  </motion.p>

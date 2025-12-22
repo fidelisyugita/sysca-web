@@ -42,6 +42,14 @@ const Navigation: React.FC = () => {
         }
     };
 
+    const [isHome, setIsHome] = useState(true);
+
+    useEffect(() => {
+        setIsHome(window.location.pathname === '/');
+    }, []);
+
+    if (!isHome) return null;
+
     return (
         <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-6">
             {SECTIONS.map(({ id, label }) => (
