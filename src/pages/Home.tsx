@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation';
 import ParallaxSection from '../components/ParallaxSection';
 import VideoBackground from '../components/VideoBackground';
 import BookingModal from '../components/BookingModal';
+import SEO from '../components/SEO';
 
 // Local WebP Assets
 // Local WebP Assets
@@ -48,6 +49,11 @@ const Home: React.FC = () => {
 
   return (
     <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth no-scrollbar text-white bg-black">
+      <SEO 
+        title="Sysca Anggelia - Virtual Executive Assistant & Private Mentor"
+        description="Sysca Anggelia offers professional Virtual Executive Assistant services and Private English Mentoring. Organize your business and master English with personalized guidance."
+        url="https://sysca.web.app/"
+      />
       
       <Navigation />
       <BookingModal 

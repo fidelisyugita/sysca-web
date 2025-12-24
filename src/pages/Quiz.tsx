@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 // import clsx from 'clsx';
 import { QUIZ_QUESTIONS } from '../lib/quiz-data';
 import VideoBackground from '../components/VideoBackground';
+import SEO from '../components/SEO';
 
 const Quiz: React.FC = () => {
     const navigate = useNavigate();
@@ -27,6 +28,11 @@ const Quiz: React.FC = () => {
 
     return (
         <div className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden font-sans text-white bg-black">
+             <SEO 
+                title="English Level Check - Sysca Anggelia"
+                description="Take a quick English level assessment to determine if you qualify for advanced classes with Sysca Anggelia."
+                url="https://sysca.web.app/quiz"
+             />
              {/* Static/Slow BG for less distraction */}
              <VideoBackground src="/corporate.webp" /> 
 

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0E0E0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#BDBDBD;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="black"/>
+  <g font-family="Cinzel, serif" fill="url(#silverGradient)" text-anchor="middle">
+    <!-- Intertwined S and A concept -->
+    <text x="50%" y="55%" font-size="300" font-weight="bold" letter-spacing="-20">SA</text>
+    <text x="50%" y="85%" font-size="40" font-weight="normal" letter-spacing="5">SYSCA ANGGELIA</text>
+  </g>
+</svg>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import VideoBackground from '../components/VideoBackground';
 import ImageCarousel from '../components/ImageCarousel';
+import SEO from '../components/SEO';
 
 // Video Assets
 import heroVideo from '../assets/hero.webp';
@@ -55,6 +56,11 @@ const Portfolio: React.FC = () => {
 
   return (
     <main className="min-h-screen w-full bg-black text-white selection:bg-purple-500/30">
+      <SEO 
+        title="Portfolio - Sysca Anggelia"
+        description="Explore the professional portfolio of Sysca Anggelia, featuring administrative support, digital marketing, and HR projects."
+        url="https://sysca.web.app/portfolio"
+      />
       <Navigation />
       
       {/* Fixed Background */}
